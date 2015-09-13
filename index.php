@@ -4,6 +4,13 @@ mysql_connect('localhost','root','root');
 mysql_selectdb('zxd');
 mysql_set_charset('utf8');
 $result = array();
+
+$sql = 'select count(*) from user';
+$rs = mysql_query($sql);
+$row = mysql_fetch_row($rs);
+
+$result["row"] = $row[0];
+
 $result["state"] = 'success';
 
 $sql=" SELECT * FROM user";
