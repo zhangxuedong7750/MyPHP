@@ -4,6 +4,7 @@ mysql_connect('localhost','root','root');
 mysql_selectdb('zxd');
 mysql_set_charset('utf8');
 $result = array();
+$result = array();//存放结果
 
 $sql = 'select count(*) from user';
 $rs = mysql_query($sql);
